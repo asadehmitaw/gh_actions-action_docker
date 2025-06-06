@@ -1,0 +1,13 @@
+name: 'action_docker'
+inputs:
+  name:
+    description: 'Name'
+    required: true
+outputs:
+  greeting:
+    description: "Greeting"
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.name }}
